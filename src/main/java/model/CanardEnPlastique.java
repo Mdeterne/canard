@@ -1,5 +1,6 @@
 package model;
 
+import model.cancan.ComportementCancan;
 import model.vol.ComportementVol;
 
 public class CanardEnPlastique extends Canard {
@@ -9,8 +10,8 @@ public class CanardEnPlastique extends Canard {
 		return super.afficher()+"canard en plastique";
 	}
 
-	public CanardEnPlastique(String nom, ComportementVol comportementVol) {
-		super(nom,comportementVol);
+	public CanardEnPlastique(String nom, ComportementVol comportementVol, ComportementCancan comportementCancan) {
+		super(nom,comportementVol,comportementCancan);
 	}
 	
 }
