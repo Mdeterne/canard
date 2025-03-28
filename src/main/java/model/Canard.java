@@ -10,7 +10,7 @@ public abstract class Canard {
 	protected ComportementCancan comportementCancan;
 	
 	public String nager() {
-		return "Tout les canards flottent, même les leurres!";
+		return "Tous les canards flottent, même les leurres!";
 	}
 	
 	public String afficher() {
@@ -22,7 +22,7 @@ public abstract class Canard {
 		this.comportementVol = comportementVol;
 		this.comportementCancan = comportementCancan;
 	}
-
+	
 	public String getNom() {
 		return nom;
 	}

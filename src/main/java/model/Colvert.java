@@ -1,12 +1,12 @@
 package model;
 
-import model.cancan.ComportementCancan;
-import model.vol.ComportementVol;
+import model.cancan.Cancan;
+import model.vol.VolerAvecDesAiles;
 
 public class Colvert extends Canard {
-
-	public Colvert(String nom, ComportementVol comportementVol, ComportementCancan comportementCancan) {
-		super(nom,comportementVol,comportementCancan);
+	
+	public Colvert(String nom) {
+		super(nom,new VolerAvecDesAiles(),new Cancan());
 	}
 
 	@Override
