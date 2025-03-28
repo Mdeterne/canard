@@ -4,6 +4,11 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import model.cancan.Cancan;
+import model.cancan.Coincoin;
+import model.vol.NePasVoler;
+import model.vol.VolerAvecDesAiles;
+
 class CanardTest {
 	private static final String NAGER = "Tous les canards flottent, même les leurres!";
 
@@ -73,5 +78,35 @@ class CanardTest {
 
 		assertEquals("Rubber", canardPlastique.getNom());
 		assertEquals("Je suis un canard en plastique", canardPlastique.afficher());
+	}
+	
+	@Test
+	public void test_changerComportementVol() {
+		colvert.changerComportementVol(new NePasVoler());
+		assertEquals(NE_PAS_VOLER, colvert.effectuerVol());
+		
+		mandarin.changerComportementVol(new NePasVoler());
+		assertEquals(NE_PAS_VOLER, mandarin.effectuerVol());
+
+		leurre.changerComportementVol(new VolerAvecDesAiles());
+		assertEquals(VOLER, leurre.effectuerVol());
+		
+		canardPlastique.changerComportementVol(new VolerAvecDesAiles());
+		assertEquals(VOLER, canardPlastique.effectuerVol());
+	}
+	
+	@Test
+	public void test_changerComportementCancan() {
+		colvert.changerComportementCancan(new Coincoin());
+		assertEquals(COINCOIN, colvert.effectuerCancan());
+		
+		mandarin.changerComportementCancan(new Coincoin());
+		assertEquals(COINCOIN, mandarin.effectuerCancan());
+
+		leurre.changerComportementCancan(new Coincoin());
+		assertEquals(COINCOIN, leurre.effectuerCancan());
+		
+		canardPlastique.changerComportementCancan(new Cancan());
+		assertEquals(CANCAN, canardPlastique.effectuerCancan());
 	}
 }
