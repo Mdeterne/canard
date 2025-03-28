@@ -1,9 +1,11 @@
 package model;
 
+import model.vol.ComportementVol;
+
 public class Mandarin extends Canard {
 
-	public Mandarin(String nom) {
-		super(nom);
+	public Mandarin(String nom, ComportementVol comportementVol) {
+		super(nom,comportementVol);
 	}
 
 	@Override

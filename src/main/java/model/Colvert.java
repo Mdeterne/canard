@@ -1,9 +1,11 @@
 package model;
 
+import model.vol.ComportementVol;
+
 public class Colvert extends Canard {
 
-	public Colvert(String nom) {
-		super(nom);
+	public Colvert(String nom, ComportementVol comportementVol) {
+		super(nom,comportementVol);
 	}
 
 	@Override
