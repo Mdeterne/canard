@@ -23,6 +23,7 @@ public class Simulateur {
 		canards.add(new Leurre("Danny"));
 		canards.add(new Mandarin("Oshidori"));
 		canards.add(new CanardEnPlastique("Rubber"));
+		canards.add(new PrototypeCanard("baEEEEEEE"));
 		return canards;
 	}
 
